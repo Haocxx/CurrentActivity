@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CurrentActivity</string>
+    <string name="string_null">null</string>
+    <string name="accessibility_service_description">Accessibility Service</string>
+</resources>
