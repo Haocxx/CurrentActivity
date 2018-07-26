@@ -4,6 +4,7 @@ import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.PixelFormat;
+import android.os.Build;
 import android.os.IBinder;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -47,7 +48,11 @@ public class FloatingViewService extends Service implements WindowChangeDetectin
         linearLayout = (LinearLayout) inflater.inflate(R.layout.layout_floating_view, null);
         packegeNameTextView = linearLayout.findViewById(R.id.package_name);
         activityNameTextView = linearLayout.findViewById(R.id.activity_name);
-        params.type = WindowManager.LayoutParams.TYPE_SYSTEM_ALERT;
+        if (Build.VERSION.SDK_INT>=26) { // Android O new feature.
+            params.type= WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY;
+        }else{
+            params.type= WindowManager.LayoutParams.TYPE_SYSTEM_ALERT;
+        }
         params.format = PixelFormat.RGBA_8888;
         params.flags = WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE | WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE;
         params.gravity = Gravity.LEFT | Gravity.TOP;
