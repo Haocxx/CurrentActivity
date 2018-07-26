@@ -29,7 +29,7 @@
         <service
             android:name=".FloatingViewService"
             android:enabled="true"
-            android:exported="false"></service>
+            android:exported="false"/>
         <service
             android:name=".WindowChangeDetectingService"
             android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
