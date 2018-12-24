@@ -13,4 +13,4 @@ CSDN: https://blog.csdn.net/haocxx/article/details/80737420
 
 GitHub: https://github.com/Haocxx/CurrentActivity
 
-Any question, please contact Haocxx.zhang (479477141@qq.com)
+Any question, please contact Haocxx.zhang (haocxx.zhang@qq.com)
